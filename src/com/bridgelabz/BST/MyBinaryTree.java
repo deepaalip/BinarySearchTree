@@ -72,6 +72,26 @@ public class MyBinaryTree<K extends Comparable<K>> {
 	
 	
 	
+	public boolean search(K key) {
+		return this.searchRecursive(root, key);
+	}
+
+	public boolean searchRecursive(MyBinaryNode<K> root, K key) {
+		if (root == null) {
+			return false;
+		} 
+		else if (key.compareTo(root.key) == 0) {
+			return true;
+		} 
+		else {
+			if (key.compareTo(root.key) < 0) {
+				return searchRecursive(root.left, key);
+			} 
+		else {
+				return searchRecursive(root.right, key);
+			}
+		}
+	}
 }	 
 	 
    

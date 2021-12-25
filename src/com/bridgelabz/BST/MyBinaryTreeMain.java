@@ -32,6 +32,8 @@ public class MyBinaryTreeMain {
 		
 		System.out.println("\n size of binaryTree:" +  myBinaryTree.getSize());
 		
+		System.out.println("\n search binaryTree:" +  myBinaryTree.search(63));
+		
 	}
 
 }
